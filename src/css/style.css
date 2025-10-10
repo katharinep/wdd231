@@ -135,6 +135,7 @@ img, svg {
   color: #fff;
   padding: 1rem;
 }
+
 .global-header a {
   color: #fff;
   text-decoration: none;
@@ -299,3 +300,6 @@ img, svg {
 svg {
   background: none;
 }
+
+/*Remember to review styling for NPS 2*/
+/*.intro, .intro h1, .info, .media-card, .media-card__image img, .media-card__title, .media-card__title a, .media-card__desc*/
