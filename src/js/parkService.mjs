@@ -221,15 +221,15 @@ async function getJson(url) {
 
 export function getInfoLinks(data) {
   const withUpdatedImages = parkInfoLinks.map((item, index) =>{
-    item.image = date[index + 2].url;
+    item.image = data[index + 2].url;
     return item;
   });
   return withUpdatedImages;
 }
 
 export async function getParkData() {
-  const parkData = await getJson("?parkCode=yell");
-    return data.data[0];
+  const parkData = await getJson("parks?parkCode=yell");
+    return json.data[0];
 }
 
 export async function getVisitorCenterData() {
