@@ -1,11 +1,9 @@
 export function parkInfoTemplate(info) {
-  return `
-    <a href="${info.url}" class="hero-banner__title">${info.fullName}</a>
+  return `<a href="/" class="hero-banner__title">${info.name}</a>
     <p class="hero-banner__subtitle">
-      <span>${info.designation || "National Park"}</span>
-      <span>${info.states.replaceAll(",", ", ")}</span>
-    </p>
-  `;
+      <span>${info.designation}</span>
+      <span>${info.states}</span>
+    </p>`;
 }
 
 export function mediaCardTemplate(info) {

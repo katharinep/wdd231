@@ -2,10 +2,8 @@ import { parkInfoTemplate, footerTemplate } from "./templates.mjs";
 
 function setHeaderInfo(data) {
     const disclaimer = document.querySelector(".disclaimer > a");
-    if (disclaimer) {
-        disclaimer.href = data.url;
-        disclaimer.innerHTML = data.fullName;
-    }
+    disclaimer.href = data.url;
+    disclaimer.innerHTML = data.fullName;
 
     document.querySelector("head > title").textContent = data.fullName;
     document.querySelector(".hero-banner > img").src = data.images[0].url;
@@ -13,11 +11,11 @@ function setHeaderInfo(data) {
 }
 
 function setFooter(data) {
-  const footerEl = document.querySelector("#park-footer");
-  footerEl.innerHTML = footerTemplate(data);
+    const footerEl = document.querySelector("#park-footer");
+    footerEl.insertAdjacentHTML("afterbegin", footerTemplate(data));
 }
 
-export function setHeaderFooter(data) {
-    setHeaderInfo(data);
-    setFooter(data);
+export function setHeaderFooter(parkData) {
+    setHeaderInfo(parkData);
+    setFooter(parkData);
 }

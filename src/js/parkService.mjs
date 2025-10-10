@@ -182,30 +182,29 @@ const park = {
   designation: "National Park"
 };
 
-export const parkInfoLinks = [
+const parkInfoLinks = [
   {
     name: "Current Conditions &#x203A;",
     link: "conditions.html",
-    image: park.images[2].url,
+    image: images[2].url,
     description:
       "See what conditions to expect in the park before leaving on your trip!"
   },
   {
     name: "Fees and Passes &#x203A;",
     link: "fees.html",
-    image: park.images[3].url,
+    image: images[3].url,
     description: "Learn about the fees and passes that are available."
   },
   {
     name: "Visitor Centers &#x203A;",
     link: "visitor_centers.html",
-    image: park.images[9].url,
+    image: images[9].url,
     description: "Learn about the visitor centers in the park."
   }
 ];
 
-
-export async function getParkData() {
+async function getJson(url) {
   const options = {
     method: "GET",
     headers: {
@@ -213,11 +212,28 @@ export async function getParkData() {
     }
   };
   let data = {};
-  const response = await fetch(baseUrl + "parks" + "?parkCode=yell", options);
-  // check to make sure the reponse was ok.
+  const response = await fetch(baseUrl + url, options);
   if (response.ok) {
-    // convert to JSON
     data = await response.json();
   } else throw new Error("response not ok");
+  return data;
+}
+
+export function getInfoLinks(data) {
+  const withUpdatedImages = parkInfoLinks.map((item, index) =>{
+    item.image = date[index + 2].url;
+    return item;
+  });
+  return withUpdatedImages;
+}
+
+export async function getParkData() {
+  const parkData = await getJson("?parkCode=yell");
     return data.data[0];
 }
+
+export async function getVisitorCenterData() {
+  const vcData = await getJson("visitorcenters?parkCode=yell");
+  return vcData.data[0];
+}
+
