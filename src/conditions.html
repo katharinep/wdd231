@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yellowstone National Park</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <script type="module" src="js/main.js"></script>
+    <title>Current Conditions</title>
+    <link rel="stylesheet" href="css/conditions.css" />
+    <script type="module" src="js/conditions.js"></script>
   </head>
   <body>
     <p class="disclaimer">
@@ -143,10 +143,23 @@
         </svg>
       </section>
     </header>
-    <main id="main">
-      <section class="intro"></section>
-      <section class="info"></section>
-    </main>
+    <main id="content" class="container">
+    <section id="alerts" aria-labelledby="alerts-title">
+      <h2 id="alerts-title">Alerts</h2>
+      <ul id="alerts-list" class="alerts-list" role="list"></ul>
+    </section>
+
+    <section id="visitor-services" aria-labelledby="visitor-services-title">
+      <h2 id="visitor-services-title">Visitor Services</h2>
+      <!-- <details> accordions will be injected here -->
+      <div id="visitor-centers" class="details-stack" role="list"></div>
+    </section>
+
+    <section id="activities" aria-labelledby="activities-title">
+      <h2 id="activities-title">Activities</h2>
+      <ul id="activities-list" class="activities-list" role="list"></ul>
+    </section>
+  </main>
     <footer id="park-footer"></footer>
   </body>
 </html>

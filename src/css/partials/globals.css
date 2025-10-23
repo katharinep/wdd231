@@ -1,0 +1,20 @@
+* { box-sizing: border-box; }
+
+
+/* Images and SVGs scale nicely by default */
+img, svg { max-width: 100%; height: auto; background: none; }
+
+
+body {
+font-family: var(--bs-body-font-family);
+font-size: 20px;
+margin: 0;
+color: var(--bs-black);
+}
+
+
+a:link,
+a:visited { color: var(--bs-link-color); }
+
+
+a:hover { color: var(--bs-black); }
