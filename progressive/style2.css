@@ -1,0 +1,121 @@
+body {
+    background-color: rgb(249, 246, 246);
+    color: #333;
+    font-size: 20px;
+    font: arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: green;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+h2 {
+    color: green;
+    border-bottom: solid green 1px;
+}
+
+main {
+    padding: 20px;
+    max-width: 80%;
+    margin: auto;
+    background-color: white;
+    border-radius: 6px;
+    text-align: center;
+    display: grid;
+    gap: 20px;
+}
+
+ul {
+    padding: 0 4px;
+    margin: 0;
+}
+
+p, li {
+    max-width: 70ch; 
+}
+
+li {
+    margin-bottom: 4px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+figure {
+    margin: 20px 0;
+    text-align: center;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+figcaption {
+    margin-top: 5px;
+    font-style: italic;
+    color: #666;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    width: 100%;
+}
+
+@media screen and (min-width: 700px) {
+  .plant-section__content {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: space-around;
+  }
+}
+
+.form-container {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #45a049;
+}
+
+.form-error {
+  color: red;
+  margin-top: 10px;
+}
