@@ -11,7 +11,7 @@ import {
   visitorCenterTemplate
 } from "./templates.mjs";
 import setHeaderFooter from "./setHeaderFooter.mjs";
-
+  
 function setAlerts(alerts) {
   const alertsContainer = document.querySelector(".alerts > ul");
   alertsContainer.innerHTML = "";
